@@ -25,7 +25,7 @@ def add_process_in_running(process,running,lastProcessEnding):
     #being a programmer thinking of worst case again and again, no process added just waittt
     if added == 0 and n>0:
         lastProcessEnding += process[0][1]-lastProcessEnding
-    print("Gee", lastProcessEnding)
+    #print("Gee", lastProcessEnding)
     return lastProcessEnding
 
 def execute_process(process,running,done,executing,timequantum):
@@ -35,7 +35,7 @@ def execute_process(process,running,done,executing,timequantum):
     n = len(process)
     while i<n:
         add_process_in_running(process,running,lastProcessEnding)
-        print(lastProcessEnding)
+        #print(lastProcessEnding)
         if not running:
             k = 0   #just i dont know, i want to write continue :/
         else:
@@ -51,7 +51,7 @@ def execute_process(process,running,done,executing,timequantum):
                 i+=1
                 del(running[0])
             else:
-                print("run kar raha hun process" ,running[0]," itnaa chalaya ",running[0][2] - timequantum)
+                #print("run kar raha hun process" ,running[0]," itnaa chalaya ",running[0][2] - timequantum)
                 running[0][2] -= timequantum
                 lastProcessEnding += timequantum
                 add_process_in_running(process,running,lastProcessEnding)
